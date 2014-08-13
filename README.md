@@ -1,19 +1,18 @@
 Registry Value Retriever
 ========================
 
-Registry Value Retriever is a simple console application that can create a specified registry key within the registry.
+Registry Value Retriever is a simple console application that prints out the data found in the specified registry key value as a string.
 
 Usage:
-   ApplicationName [RegistryRoot] [RegistryKey] {RegistryValue} {ValueData}
+   ApplicationName [RegistryRoot] [RegistryKey] [ValueName]
    where
      [RegistryRoot] is the registry root key, e.g. HKEY_LOCAL_MACHINE
-     [RegistryKey] is the actual fully qualified key to create minus the root key, e.g. SOFTWARE\Microsoft
-     {RegistryValue}: Optional Registry Value name to be created")
-     {ValueData}: Optional Registry Value Data to be set")
+     [RegistryKey] is the actual fully qualified key minus the root key, e.g. SOFTWARE\Microsoft
+     [ValueName] is the name of the Value for which the data is to be returned
 Example:
-  "Registry Value Retriever.exe" "HKEY_LOCAL_MACHINE" "SOFTWARE\Microsoft\.NETFramework" 
+  "Registry Value Retriever.exe" "HKEY_LOCAL_MACHINE" "SOFTWARE\Microsoft\.NETFramework" "InstallRoot"
 Output:
-  Success.
+  C:\WINDOWS\Microsoft.NET\Framework\
 
 Created by Craig Lotter, January 2006
 
